@@ -1,0 +1,65 @@
+{% extends 'base.html' %} {%load static%}
+{% load active_url %}
+
+<title>{% block title %}  {%endblock%}</title>
+{%block content%}
+
+<main class="main">
+
+  <!-- Page Title -->
+  <div class="page-title">
+    <div class="heading">
+      <div class="container">
+        <div class="row d-flex justify-content-center text-center">
+          <div class="col-lg-8">
+            <h1>Service Details</h1>
+            <p class="mb-0">Our expert team handles every task with precision and dedication. We ensure top-quality results in all our services, providing solutions tailored to meet your needs. Whether it's research, thesis writing, tutoring, business planning, assignments, graphics design, transcription, video editing, web development, or programming projects, we strive for excellence in everything we do.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="breadcrumbs">
+      <div class="container">
+        <ol>
+          <li><a href="/#services">Services</a></li>
+          <li class="current">Service Details</li>
+        </ol>
+      </div>
+    </nav>
+  </div><!-- End Page Title -->
+  <section id="service-details" class="service-details section">
+
+    <div class="container">
+
+      <div class="row gy-4">
+  
+
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="services-list">
+            <a class="{% is_active request 'user:research-details' %}" href="{% url 'user:research-details' %}">RESEARCH</a>
+            <a class="{% is_active request 'user:web-details' %}" href="{% url 'user:web-details' %}">Web Design</a>
+            <a class="{% is_active request 'user:thesis-details' %}" href="{% url 'user:thesis-details' %}">THESIS SUPPORT</a>
+            <a class="{% is_active request 'user:graphics-details' %}" href="{% url 'user:graphics-details' %}">Graphic Design</a>
+            <a class="{% is_active request 'user:business-details' %}" href="{% url 'user:business-details' %}">BUSINESS PLAN WRITING</a>
+            <a class="{% is_active request 'user:assignment-details' %}" href="{% url 'user:assignment-details' %}">ASSIGNMENT HELP</a>
+            <a class="{% is_active request 'user:transcription-details' %}" href="{% url 'user:transcription-details' %}">TRANSCRIPTION</a>
+            <a class="{% is_active request 'user:video-details' %}" href="{% url 'user:video-details' %}">VIDEO EDITING</a>
+            <a class="{% is_active request 'user:res_help-details' %}" href="{% url 'user:res_help-details' %}">RESEARCH ASSISTANCE</a>
+            <a class="{% is_active request 'user:programming-details' %}" href="{% url 'user:programming-details' %}">PROGRAMMING PROJECTS</a>
+            <a class="{% is_active request 'user:wr-ed-details' %}" href="{% url 'user:wr-ed-details' %}">EDITING</a>
+        </div>
+
+
+          <h4>  Take Your Project to the Next Level
+          </h4>
+          <p style="color: black; font-size: 15px; text-align: center; margin-bottom: 
+    26px;font-family: 'Muli-SemiBold';">  Ready to elevate your projects to the next level? Our expert team is here to provide top-notch assistance tailored to your needs. Don't wait any longer—place your order today and experience exceptional service and results!
+</p>
+        </div>
+{%block base%}
+
+{%endblock%}
+</main>
+
+
+{%endblock%}

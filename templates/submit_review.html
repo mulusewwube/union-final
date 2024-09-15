@@ -1,0 +1,53 @@
+{% extends 'base.html' %} {%load static%}
+{% load active_url %}
+
+<title>{% block title %} review {%endblock%}</title>
+{%block content%}
+<section>
+    <div class="review-form-container">
+        <h1 class="review-form-header">Submit Your Review</h1>
+        {% if messages %}
+        <ul class="messages" id="messages">
+            {% for message in messages %}
+                <li class="{{ message.tags }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+          {% endif %}
+        <form class="review_form" action="{% url 'user:submit_review' %}" method="post">
+            {% csrf_token %}
+            <div class="review-form-group">
+                <label for="name" class="review-form-label">Name:</label>
+                <input type="text" id="name" name="name" class="review-form-input" required>
+            </div>
+
+            <div class="review-form-group">
+                <label for="email" class="review-form-label">Email:</label>
+                <input type="email" id="email" name="email" class="review-form-input" required>
+            </div>
+
+            <div class="review-form-group review-form-rating-container">
+        
+                <label for="rating">Rating:</label>
+                <span onclick="setRating(1)" class="star">★</span>
+                <span onclick="setRating(2)" class="star">★</span>
+                <span onclick="setRating(3)" class="star">★</span>
+                <span onclick="setRating(4)" class="star">★</span>
+                <span onclick="setRating(5)" class="star">★</span>
+                    
+                    <!-- <h3 style="display: block;" id="output">
+                        Rating is: 0/5
+                    </h3> -->
+                <input type="hidden" id="id_rating" name="rating" required>
+            </div>
+
+            <div class="review-form-group">
+                <label for="comments" class="review-form-label">Comments:</label>
+                <textarea id="comments" name="comments" class="review-form-textarea" placeholder="Your feedback..." required></textarea>
+            </div>
+
+            <button type="submit" class="review-form-submit-btn">Submit Review</button>
+        </form>
+    </div>
+
+</section>
+{%endblock%}

@@ -1,0 +1,26 @@
+{% extends 'servicebase.html' %}
+{% load static %}
+
+<title>{% block title %} Web Development {% endblock %}</title>
+{% block base %}
+
+  <!-- Service Details Section -->
+  <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+    <img src="{% static 'assets/img/web-development.jpg' %}" alt="" class="img-fluid services-img">
+    <h3>Custom Web Development Services</h3>
+    <p style="color: black; font-size: 20px; text-align: center; margin-bottom: 26px; font-family: 'Muli-SemiBold';">
+      Our web development services provide custom solutions to create dynamic and responsive websites. We specialize in building websites that are tailored to your needs and goals.
+    </p>
+    <ul>
+      <li><i class="bi bi-check-circle"></i> <span>Custom website design and development.</span></li>
+      <li><i class="bi bi-check-circle"></i> <span>Responsive and mobile-friendly designs.</span></li>
+      <li><i class="bi bi-check-circle"></i> <span>SEO optimization and user-friendly interfaces.</span></li>
+    </ul>
+    <p style="color: black; font-size: 20px; text-align: center; margin-bottom: 26px; font-family: 'Muli-SemiBold';">
+      Rely on our skilled developers to create a website that enhances your online presence and engages your audience.
+    </p>
+    <a href="{%url 'order:website-project'%}"><button class="order-button">order now</button></a>
+  
+  </div>
+
+{% endblock %}

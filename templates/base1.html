@@ -1,0 +1,775 @@
+{% extends 'base.html' %}{%load static%}
+<!-- partial:index.partial.html -->
+<title>{% block title %}  {%endblock%}</title>
+
+{% block content %}
+<!-- Hero Section -->
+
+<section id="hero" class="hero section">
+
+  <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+    <div class="row gy-5 justify-content-between">
+      <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
+        <h2><span>Welcome to </span><span class="accent">UNION Service</span></h2>
+        <p>your trusted partner in academic and professional success, offering personalized support for assignments, research, web development, projects, and more.</p>
+        <div class="d-flex">
+          <a href="{%url 'user:login'%}" class="btn-get-started">Get Started</a>
+          <a href="{%static 'css/assets/img/20240814100212.mp4'%}" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+        </div>
+      </div>
+      <div class="col-lg-5 order-1 order-lg-2">
+        <img src="{%static 'css/assets/img/team-meeting.svg'%}" class="img-fluid" alt="">
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="icon-boxes position-relative" data-aos="fade-up" data-aos-delay="200">
+    <div class="container position-relative">
+      <div class="row gy-4 mt-5">
+
+        <div class="col-xl-3 col-md-6">
+          <div class="icon-box">
+            <div class="icon">
+              <img src="{% static 'logo.png' %}" alt="Union Logo" class="union-icon">
+            </div>
+            <h4 class="title"><a href="" class="stretched-link">Professionalism</a></h4>
+          </div>
+        </div><!--End Icon Box -->
+
+        <div class="col-xl-3 col-md-6">
+          <div class="icon-box">
+            <div class="icon">
+              <img src="{% static 'logo.png' %}" alt="Union Logo" class="union-icon">
+            </div>
+            <h4 class="title"><a href="" class="stretched-link">Complete on Time</a></h4>
+          </div>
+        </div><!--End Icon Box -->
+
+        <div class="col-xl-3 col-md-6">
+          <div class="icon-box">
+            <div class="icon">
+              <img src="{% static 'logo.png' %}" alt="Union Logo" class="union-icon">
+            </div>
+            <h4 class="title"><a href="" class="stretched-link">Meet Your Requirements</a></h4>
+          </div>
+        </div><!--End Icon Box -->
+
+        <div class="col-xl-3 col-md-6">
+          <div class="icon-box">
+            <div class="icon">
+              <img src="{% static 'logo.png' %}" alt="Union Logo" class="union-icon">
+            </div>
+            <h4 class="title"><a href="" class="stretched-link">Trusted</a></h4>
+          </div>
+        </div><!--End Icon Box -->
+
+      </div>
+    </div>
+</div>
+
+
+
+
+</section><!-- /Hero Section -->
+
+<!-- About Section -->
+<section id="about" class="about section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>About Us<br></h2>
+    <p>Empowering Your Academic and Professional Journey</p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+    <div class="row gy-4">
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <h3>Unleashing Potential Through Innovation and Excellence</h3>
+        <img src="{%static 'css/assets/img/customer-service.svg'%}" class="img-fluid rounded-4 mb-4" alt="">
+        
+        <p> Our mission is to empower students and professionals by offering reliable and efficient services that cater to their unique requirements. Whether you're struggling with a complex assignment or need expert advice for your research project, UNION is here to help you every step of the way.</p>
+      </div>
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
+        <div class="content ps-0 ps-lg-5">
+          <p class="fst-italic">
+
+            Why Choose UNION?
+          </p>
+          <ul>
+            <li><i class="bi bi-check-circle-fill"></i> <span>Expert Guidance: Our team comprises seasoned professionals with vast experience in various academic and professional fields.</span></li>
+            <li><i class="bi bi-check-circle-fill"></i> <span>Comprehensive Support: From assignments and research to web development and projects, we offer a wide range of services tailored to your needs.</span></li>
+            <li><i class="bi bi-check-circle-fill"></i> <span>Dedicated Service: We are committed to your success and work tirelessly to provide you with the best support possible.</span></li>
+          </ul>
+
+          <b>Join us at UNION and let us help you reach new heights in your academic and professional journey.</b>
+
+          <div class="position-relative mt-4">
+            <img src="{%static 'css/assets/img/about-2.jpg'%}" class="img-fluid rounded-4" alt="">
+            <a href="{%static 'css/assets/img/Student_Helper_Translation_Service.mp4'%}" class="glightbox play-btn"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section><!-- /About Section -->
+
+</section>
+
+<!-- /Clients Section -->
+
+<!-- Stats Section -->
+<section id="stats" class="stats section">
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row gy-4 align-items-center">
+
+      <div class="col-lg-5">
+        <img src="{%static 'css/assets/img/stats-img.svg'%}" alt="" class="img-fluid">
+      </div>
+
+      <div class="col-lg-7">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6">
+            <div class="stats-item d-flex">
+              <i class="bi bi-emoji-smile flex-shrink-0"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+                <p><strong>Satisfied Clients</strong> <span>We pride ourselves on the happiness and satisfaction of our clients</span></p>
+              </div>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-6">
+            <div class="stats-item d-flex">
+              <i class="bi bi-journal-richtext flex-shrink-0"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+                <p><strong>Completed Projects</strong> <span>Delivering quality and efficiency in every project we undertake.</span></p>
+              </div>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-6">
+            <div class="stats-item d-flex">
+              <i class="bi bi-headset flex-shrink-0"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
+                <p><strong>Support Hours</strong> <span>Providing dedicated support to ensure seamless operations.</span></p>
+              </div>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-6">
+            <div class="stats-item d-flex">
+              <i class="bi bi-people flex-shrink-0"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
+                <p><strong>Team Members</strong> <span>Our hard-working team is committed to excellence and innovation.</span></p>
+              </div>
+            </div>
+          </div><!-- End Stats Item -->
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section><!-- /Stats Section -->
+
+<!-- Call To Action Section -->
+<section id="call-to-action" class="call-to-action section">
+
+  <div class="container">
+    <img src="{%static 'css/assets/img/cta-bg.jpg'%}" alt="">
+    <div class="content row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+      <div class="col-xl-10">
+        <div class="text-center">
+          <a href="{%static 'css/assets/img/20240814100212.mp4'%}" class="glightbox play-btn"></a>
+          <h3>Call To Action</h3>
+          <p>Join us today and experience the benefits of dedicated academic support. Whether you need help with assignments, thesis projects, research, or tutoring, our team is here to assist you. Sign up now and take the first step towards academic success!</p>
+          <a class="cta-btn" href="{%url 'user:login'%}">Call To Action</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section><!-- /Call To Action Section -->
+
+<!-- Services Section -->
+<section id="services" class="services section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Our Services</h2>
+    <p>At UNION, we offer a comprehensive range of services to support students in their academic and professional journeys. Our goal is to provide high-quality assistance tailored to your needs. Our services include:</p>
+</div><!-- End Section Title -->
+
+<div class="container">
+
+    <div class="row gy-4">
+  
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item position-relative">
+                <div class="icon">
+                    <i class="bi bi-activity"></i>
+                </div>
+                <h3>Research</h3>
+                <p>Thorough and detailed research services for your academic projects and papers include:</p>
+                <ul>
+                    <li>Academic Research</li>
+                    <li>Market Research Analysis</li>
+                    <li>Data Mining</li>
+                    <li>Statistical Analysis</li>
+                    <li>Literature Reviews</li>
+                    <li>and others...</li>
+                </ul>
+                <a href="{% url 'user:research-details'%}" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div><!-- End Service Item -->
+  
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+                <div class="icon">
+                    <i class="bi bi-broadcast"></i>
+                </div>
+                <h3>Thesis Support</h3>
+                <p>Comprehensive support through the second phase of your thesis development includes:</p>
+                <ul>
+                    <li>Thesis Writing and Editing</li>
+                    <li>Dissertation Consulting</li>
+                    <li>Research Proposal Writing</li>
+                    <li>Data Analysis for Theses</li>
+                    <li>Thesis Formatting</li>
+                    <li>and others...</li>
+                </ul>
+                <a href="{% url 'user:thesis-details'%}" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div><!-- End Service Item -->
+  
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+                <div class="icon">
+                    <i class="bi bi-easel"></i>
+                </div>
+                <h3>Business Plan Writing</h3>
+                <p>Expert assistance in crafting professional business plans includes:</p>
+                <ul>
+                    <li>Startup Business Plans</li>
+                    <li>Financial Planning</li>
+                    <li>Market Analysis</li>
+                    <li>SWOT Analysis</li>
+                    <li>Business Model Development</li>
+                    <li>and others...</li>
+                </ul>
+                <a href="{% url 'user:business-details'%}" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div><!-- End Service Item -->
+  
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative">
+                <div class="icon">
+                    <i class="bi bi-bounding-box-circles"></i>
+                </div>
+                <h3>Assignment Help</h3>
+                <p>Reliable help with your assignments to ensure high-quality submissions includes:</p>
+                <ul>
+                    <li>Homework Help</li>
+                    <li>Case Study Writing</li>
+                    <li>Essay Writing</li>
+                    <li>Course Material Summarization</li>
+                    <li>Project Report Writing</li>
+                    <li>and others...</li>
+                </ul>
+                <a href="{% url 'user:assignment-details'%}" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div><!-- End Service Item -->
+  
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item position-relative">
+                <div class="icon">
+                    <i class="bi bi-calendar4-week"></i>
+                </div>
+                <h3>Graphic Design</h3>
+                <p>Creative graphic design solutions for your projects include:</p>
+                <ul>
+                    <li>Logo Design</li>
+                    <li>Brand Identity Creation</li>
+                    <li>Packaging Design</li>
+                    <li>Marketing Collateral Design</li>
+                    <li>Infographics and Data Visualization</li>
+                    <li>and others...</li>
+                </ul>
+                <a href="{% url 'user:graphics-details'%}" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div><!-- End Service Item -->
+  
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item position-relative">
+                <div class="icon">
+                    <i class="bi bi-chat-square-text"></i>
+                </div>
+                <h3>Transcription</h3>
+                <p>Accurate transcription services for your audio and video files include:</p>
+                <ul>
+                    <li>Audio/Video Transcription</li>
+                    <li>Academic Transcription</li>
+                    <li>Subtitling and Captioning</li>
+                    <li>and others...</li>
+                </ul>
+                <a href="{% url 'user:transcription-details'%}" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div><!-- End Service Item -->
+  
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
+            <div class="service-item position-relative">
+                <div class="icon">
+                    <i class="bi bi-play-circle"></i>
+                </div>
+                <h3>Video Editing</h3>
+                <p>Professional video editing to enhance your multimedia projects includes:</p>
+                <ul>
+                    <li>Post-Production Editing</li>
+                    <li>Motion Graphics</li>
+                    <li>Promotional Videos</li>
+                    <li>and others...</li>
+                </ul>
+                <a href="{% url 'user:video-details'%}" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div><!-- End Service Item -->
+  
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="800">
+            <div class="service-item position-relative">
+                <div class="icon">
+                    <i class="bi bi-code-slash"></i>
+                </div>
+                <h3>Web Development</h3>
+                <p>Custom web development services to meet your specific needs include:</p>
+                <ul>
+                    <li>E-commerce Website Development</li>
+                    <li>Custom Web Application Development</li>
+                    <li>WordPress Development</li>
+                    <li>Website Maintenance and Support</li>
+                    <li>UX/UI Design</li>
+                    <li>and others...</li>
+                </ul>
+                <a href="{% url 'user:web-details'%}" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div><!-- End Service Item -->
+  
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="900">
+            <div class="service-item position-relative">
+                <div class="icon">
+                    <i class="bi bi-gear-fill"></i>
+                </div>
+                <h3>Programming Projects</h3>
+                <p>Assistance with programming projects to help you succeed in your coursework includes:</p>
+                <ul>
+                    <li>Mobile App Development</li>
+                    <li>API Development</li>
+                    <li>Software Testing and QA</li>
+                    <li>Custom Software Development</li>
+                    <li>SaaS Development</li>
+                    <li>and others...</li>
+                </ul>
+                <a href="{% url 'user:programming-details' %}" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div><!-- End Service Item -->
+  
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="1000">
+            <div class="service-item position-relative">
+                <div class="icon">
+                    <i class="bi bi-pencil"></i>
+                </div>
+                <h3>Editing</h3>
+                <p>Professional Editing services to polish your work include:</p>
+                <ul>
+                    <li>Content Writing</li>
+                    <li>Copywriting</li>
+                    <li>Academic Writing and Editing</li>
+                    <li>Proofreading and Formatting</li>
+                    <li>Creative Writing</li>
+                    <li>and others...</li>
+                </ul>
+                <a href="{% url 'user:wr-ed-details'%}" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+
+      
+      
+      <!-- End Service Item -->
+
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="1100">
+        <div class="service-item position-relative">
+          <div class="icon">
+            <i class="bi bi-search"></i>
+          </div>
+          <h3>Research Assistance</h3>
+          <p>Dedicated research assistance for your academic endeavors.</p>
+          <a href="{%url 'user:res_help-details'%}" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+      
+      <!-- End Service Item -->
+  
+    </div>
+  
+  </div>
+  </section>
+
+
+<!-- /Services Section -->
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="testimonials section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Testimonials</h2>
+    <p>What Our Clients Say</p>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="swiper init-swiper">
+      <script type="application/json" class="swiper-config">
+        {
+          "loop": true,
+          "speed": 600,
+          "autoplay": {
+            "delay": 5000
+          },
+          "slidesPerView": "auto",
+          "pagination": {
+            "el": ".swiper-pagination",
+            "type": "bullets",
+            "clickable": true
+          },
+          "breakpoints": {
+            "320": {
+              "slidesPerView": 1,
+              "spaceBetween": 40
+            },
+            "1200": {
+              "slidesPerView": 3,
+              "spaceBetween": 10
+            }
+          }
+        }
+      </script>
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <img src=""" class="testimonial-img" alt="">
+            <h3>Abraham Dagne</h3>
+            <h4>University Student</h4>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>UNION's research services were instrumental in the success of our latest project. Their attention to detail and comprehensive approach ensured we had all the information we needed. Highly recommended!</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <img src="{}" class="testimonial-img" alt="">
+            <h3>Mulugeta Tesfaw</h3>
+            <h4>Designer</h4>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>Working with UNION on graphic design projects has been a game changer for our business. Their creative solutions and professional execution have consistently exceeded our expectations. They truly bring our visions to life.</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <img src="{}" class="testimonial-img" alt="">
+            <h3>sisay molla</h3>
+            <h4>Store Owner</h4>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>UNION's business plan writing services were invaluable as we launched our new store. Their expertise helped us create a clear, professional plan that has guided us every step of the way. We couldn't have done it without them.</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+          </div>
+        </div>
+        
+        <!-- End testimonial item -->
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <img src="{}" class="testimonial-img" alt="">
+            <h3>Heran Bereket</h3>
+            <h4>University Student</h4>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>The support I received from UNION during the second phase of my thesis was exceptional. They provided invaluable guidance and ensured that my work was of the highest quality.</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+          </div>
+        </div>
+            <!-- End testimonial item -->
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <img src="{}" class="testimonial-img" alt="">
+            <h3>Mulusew Wube</h3>
+            <h4>Freelancer</h4>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>UNION’s assignment help was a lifesaver. Their expert assistance ensured that my submissions were top-notch and delivered on time. I couldn't be happier with their service.</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+          </div>
+        </div>
+
+
+            <!-- End testimonial item -->
+      
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{'%}" class="testimonial-img" alt="">
+                <h3>Yemam Mohammed</h3>
+                <h4>Video Editor</h4>
+                <div class="stars"> 
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>UNION’s video editing services are outstanding. Their attention to detail and creative touch have greatly improved the quality of my projects. They always deliver on time and exceed expectations.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+
+        <!-- End testimonial item -->
+
+
+        <!-- End testimonial item -->
+      
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <img src="{}" class="testimonial-img" alt="">
+            <h3>Yonas Mulugeta</h3>
+            <h4>University Student</h4>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>UNION's transcription services are highly accurate and reliable. They handle my audio and video files with great care, ensuring that every detail is captured perfectly.</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+          </div>
+        </div>
+
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+
+</section>
+<!-- /Testimonials Section -->
+</section>
+<!-- /Team Section -->
+
+<!-- Faq Section -->
+<section id="faq" class="faq section">
+
+  <div class="container">
+
+    <div class="row gy-4">
+
+      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="content px-xl-5">
+          <h3><span>Frequently Asked </span><strong>Questions</strong></h3>
+          <p>
+            Welcome to our FAQ section. Here, you will find answers to the most common questions about our services.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+
+        <div class="faq-container">
+          <div class="faq-item faq-active">
+            <h3><span class="num">1.</span> <span>How can I contact customer support?</span></h3>
+            <div class="faq-content">
+              <p>Our customer support team is available 24/7 via email, phone, and live chat to assist you with any inquiries.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item">
+            <h3><span class="num">2.</span> <span>What payment methods do you accept?</span></h3>
+            <div class="faq-content">
+              <p>We accept various payment methods, including TELBIRR, M-PESA and bank transfers(CBE ,BOA, DASHEN BANK, ABAY BANK, AWASH BANK, AMHARA BANK, OROMIYA BANK) ETC.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item">
+            <h3><span class="num">3.</span> <span> How can I track my order?</span></h3>
+            <div class="faq-content">
+              <p>Once your order is shipped, you can see the status and other information from your dashboard, Or you can contact us by PHONE, TELEGRAM , GMAIL and other social media</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item">
+            <h3><span class="num">4.</span> <span>How can I order?</span></h3>
+            <div class="faq-content">
+              <p>once you are at the order service page you can select your service and fill the forms or you can send us your file or text by TELEGRAM, GMAIL, PHONE  after that we will contact you for more information, </p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item">
+            <h3><span class="num">5.</span> <span>How do I create an account?</span></h3>
+            <div class="faq-content">
+              <p>Creating an account is easy. Click on the "Get started" button at the top of our homepage and follow the instructions to get started.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</section>
+<!-- /Faq Section -->
+
+
+<!-- Contact Section -->
+<section id="contact" class="contact section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Contact</h2>
+    <p>Our company's services are designed to address critical needs, ensuring meaningful connections and effective solutions.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row gx-lg-0 gy-4">
+
+      <div class="col-lg-4">
+        <div class="info-container d-flex flex-column align-items-center justify-content-center">
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+            <i class="bi bi-geo-alt flex-shrink-0"></i>
+            <div>
+              <h3>Address</h3>
+              <p>Addis Ababa, Ethiopia</p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+            <i class="bi bi-telephone flex-shrink-0"></i>
+            <div>
+              <h3>Call Us</h3>
+              <p>+251953700112/+251988540393</p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+            <i class="bi bi-envelope flex-shrink-0"></i>
+            <div>
+              <h3>Email Us</h3>
+              <p>union9537@gmail.com</p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+            <i class="bi bi-clock flex-shrink-0"></i>
+            <div>
+              <h3>Open Hours:</h3>
+              <p>24 hours</p>
+            </div>
+          </div>
+          <!-- End Info Item -->
+
+        </div>
+
+      </div>
+
+      <div class="col-lg-8">
+        <form method="post" action="{%url 'user:contactus'%}" class="php-email-form" data-aos="fade" data-aos-delay="100">
+          {% if messages %}
+        <ul class="messages" id="messages">
+            {% for message in messages %}
+                <li class="{{ message.tags }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+          {%csrf_token %}
+          {{form}}
+          <div class="row gy-4">
+
+            <div class="col-md-6">
+              <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+            </div>
+
+            <div class="col-md-6 ">
+              <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+            </div>
+
+            <div class="col-md-12">
+              <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+            </div>
+
+            <div class="col-md-12">
+              <textarea class="form-control" name="message" rows="8" placeholder="Message" required=""></textarea>
+            </div>
+
+            <div class="col-md-12 text-center">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your message has been sent. Thank you!</div>
+
+              <button type="submit">Send Message</button>
+            </div>
+
+          </div>
+        </form>
+      </div>
+      
+      
+      <!-- End Contact Form -->
+
+    </div>
+
+  </div>
+
+</section><!-- /Contact Section -->
+
+{%endblock%}

@@ -1,0 +1,25 @@
+{% extends 'servicebase.html' %}
+{% load static %}
+
+<title>{% block title %} Research {% endblock %}</title>
+{% block base %}
+
+  <!-- Service Details Section -->
+  <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+    <img src="{% static 'assets/img/research.jpg' %}" alt="" class="img-fluid services-img">
+    <h3>Expert Research Services for Academic Excellence</h3>
+    <p style="color: black; font-size: 20px; text-align: center; margin-bottom: 26px; font-family: 'Muli-SemiBold';">
+      Our research services provide comprehensive support to help you achieve academic success. Our experts conduct thorough research to deliver insightful and well-documented papers.
+    </p>
+    <ul>
+      <li><i class="bi bi-check-circle"></i> <span>In-depth research on your topic of choice.</span></li>
+      <li><i class="bi bi-check-circle"></i> <span>Accurate and reliable sources.</span></li>
+      <li><i class="bi bi-check-circle"></i> <span>Custom research papers tailored to your requirements.</span></li>
+    </ul>
+    <p style="color: black; font-size: 20px; text-align: center; margin-bottom: 26px; font-family: 'Muli-SemiBold';">
+      Trust our experts to provide you with high-quality research that meets your academic standards and helps you excel.
+    </p>
+    <a href="{%url 'order:order'%}"><button class="order-button">order now</button></a>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'servicebase.html' %}
+{% load static %}
+
+<title>{% block title %} Video Editing {% endblock %}</title>
+{% block base %}
+
+  <!-- Service Details Section -->
+  <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+    <img src="{% static 'assets/img/video-editing.jpg' %}" alt="" class="img-fluid services-img">
+    <h3>Professional Video Editing Services</h3>
+    <p style="color: black; font-size: 20px; text-align: center; margin-bottom: 26px; font-family: 'Muli-SemiBold';">
+      Our video editing services are designed to bring your vision to life. We offer professional editing to enhance your videos, making them engaging and impactful.
+    </p>
+    <ul>
+      <li><i class="bi bi-check-circle"></i> <span>High-quality video editing and effects.</span></li>
+      <li><i class="bi bi-check-circle"></i> <span>Custom transitions and animations.</span></li>
+      <li><i class="bi bi-check-circle"></i> <span>Color correction and audio enhancement.</span></li>
+    </ul>
+    <p style="color: black; font-size: 20px; text-align: center; margin-bottom: 26px; font-family: 'Muli-SemiBold';">
+      Let our expert editors transform your footage into polished, professional videos that captivate your audience.
+    </p>
+    <a href="{%url 'order:video-project'%}"><button class="order-button">order now</button></a>
+
+  </div>
+
+{% endblock %}

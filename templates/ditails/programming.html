@@ -1,0 +1,25 @@
+{% extends 'servicebase.html' %}
+{% load static %}
+
+<title>{% block title %} Programming Project {% endblock %}</title>
+{% block base %}
+
+  <!-- Service Details Section -->
+  <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+    <img src="{% static 'assets/img/programming-project.jpg' %}" alt="" class="img-fluid services-img">
+    <h3>Expert Programming Project Assistance</h3>
+    <p style="color: black; font-size: 20px; text-align: center; margin-bottom: 26px; font-family: 'Muli-SemiBold';">
+      Our programming project services offer expert assistance to help you with all your coding needs. We provide tailored solutions to ensure your projects are completed successfully.
+    </p>
+    <ul>
+      <li><i class="bi bi-check-circle"></i> <span>Custom programming solutions.</span></li>
+      <li><i class="bi bi-check-circle"></i> <span>Debugging and optimization.</span></li>
+      <li><i class="bi bi-check-circle"></i> <span>Project planning and development.</span></li>
+    </ul>
+    <p style="color: black; font-size: 20px; text-align: center; margin-bottom: 26px; font-family: 'Muli-SemiBold';">
+      Trust our experienced programmers to deliver high-quality code and solutions that meet your project requirements.
+    </p>
+    <a href="{%url 'order:program-project'%}"><button class="order-button">order now</button></a>
+  </div>
+
+{% endblock %}

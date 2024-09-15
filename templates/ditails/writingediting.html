@@ -1,0 +1,25 @@
+{% extends 'servicebase.html' %}
+{% load static %}
+
+<title>{% block title %} Editing Service {% endblock %}</title>
+{% block base %}
+
+  <!-- Service Details Section -->
+  <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+    <img src="{% static 'assets/img/editing.jpg' %}" alt="" class="img-fluid services-img">
+    <h3>Expert Editing Services for Flawless Documents</h3>
+    <p style="color: black; font-size: 20px; text-align: center; margin-bottom: 26px; font-family: 'Muli-SemiBold';">
+      We correct grammar, punctuation, and syntax errors, enhancing the clarity and readability of your text. Our editors are meticulous and experienced in various fields.
+    </p>
+    <ul>
+      <li><i class="bi bi-check-circle"></i> <span>Accurate and thorough proofreading.</span></li>
+      <li><i class="bi bi-check-circle"></i> <span>Professional formatting and style adjustments.</span></li>
+      <li><i class="bi bi-check-circle"></i> <span>Timely delivery and confidentiality assured.</span></li>
+    </ul>
+    <p style="color: black; font-size: 20px; text-align: center; margin-bottom: 26px; font-family: 'Muli-SemiBold';">
+      Our team ensures that your documents are error-free and professionally polished. We provide feedback and suggestions to enhance the overall quality of your work.
+    </p>
+    <a href="{%url 'order:editing-project'%}"><button class="order-button">order now</button></a>
+  </div>
+
+{% endblock %}

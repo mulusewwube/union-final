@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+{% load static %}
+<title>{% block title %}Thesis {% endblock %}</title>
+
+{% block content %}
+<div class="wrapper">
+  <form method="post" action="{% url 'order:thesis' %}" id="wizard" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <!-- SECTION 1 -->
+    <h2></h2>
+    <section>
+      <div class="inner">
+        <div class="image-holder">
+          <img src="{% static 'css/assets/img/form_images/images.jpeg'%}" alt="">
+        </div>
+        <div class="form-content">
+          <div class="form-header">
+            <h3>Thesis Form</h3>
+          </div>
+          {% if messages %}
+        <ul class="messages" id="messages">
+            {% for message in messages %}
+                <li class="{{ message.tags }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+          {% endif %}
+          <p>Please fill with your details</p>
+          <div class="form-row">
+            <div class="form-holder">
+              <input name="firstname" type="text" placeholder="First Name" class="form-control">
+            </div>
+            <div class="form-holder">
+              <input name="lastname" type="text" placeholder="Last Name" class="form-control">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-holder">
+              <input name="email" type="text" placeholder="Your Email" class="form-control">
+            </div>
+            <div class="form-holder">
+              <input name="phone_number" type="text" placeholder="Phone Number" class="form-control">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-holder" style="align-self: flex-end; transform: translateY(4px);">
+              <div class="checkbox-tick">
+                <label class="male">
+                  <input name="gender" type="radio" value="male" checked> Male<br>
+                  <span class="checkmark"></span>
+                </label>
+                <label class="female">
+                  <input type="radio" name="gender" value="female"> Female<br>
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="checkbox-circle">
+            <label>
+              <input type="checkbox" name="accept_terms" checked> Nor again is there anyone who loves or pursues or desires to obtaini.
+              <span class="checkmark"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2 -->
+    <h2></h2>
+    <section>
+      <div class="inner">
+        <div class="image-holder">
+          <img src="{% static 'css/assets/img/form_images/istockphoto-1143910377-612x612.jpg' %}" alt="">
+        </div>
+        <div class="form-content">
+          <div class="form-header">
+            <h3>Thesis Form</h3>
+          </div>
+          <p>Please fill with additional info</p>
+          <div class="form-row">
+            <div class="form-holder w-100">
+              <input name="title" type="text" placeholder="Title" class="form-control">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-holder">
+              <input name="number_of_pages" type="number" placeholder="Number of Pages" class="form-control">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-holder">
+              <input name="abstract" type="file" placeholder="Abstract file" class="form-control">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3 -->
+    <h2></h2>
+    <section>
+      <div class="inner">
+        <div class="image-holder">
+          <img src="{% static 'css/assets/img/form_images/images (1).jpeg' %}" alt="">
+        </div>
+        <div class="form-content">
+          <div class="form-header">
+            <h3>Thesis Form</h3>
+          </div>
+          <p>Send an optional message</p>
+          <div class="form-row">
+            <div class="form-holder w-100">
+              <textarea name="description" placeholder="Your message here!" class="form-control" style="height: 99px;"></textarea>
+            </div>
+          </div>
+          <div class="checkbox-circle mt-24">
+            <label>
+              <input type="checkbox" name="accept_terms" checked> Please accept <a href="{%url 'user:terms_and_conditions'%}">terms and conditions ?</a>
+              <span class="checkmark"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </section>
+  </form>
+</div>
+
+<!-- JQUERY -->
+
+<!-- Template created and distributed by Colorlib -->
+{% endblock %}

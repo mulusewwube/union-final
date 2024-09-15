@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - UNION</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h2 {
+            margin-top: 20px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+        p {
+            margin: 10px 0;
+        }
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        ul li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Privacy Policy</h1>
+
+        <h2>1. Introduction</h2>
+        <p>Welcome to UNION. We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your personal information when you use our services.</p>
+
+        <h2>2. Information We Collect</h2>
+        <p>We may collect the following types of information:</p>
+        <ul>
+            <li>Personal identification information (Name, email address, phone number, etc.)</li>
+            <li>Payment information (bank details, transaction history, etc.)</li>
+            <li>Usage data (information on how you use our services)</li>
+            <li>Technical data (IP address, browser type, device information, etc.)</li>
+        </ul>
+
+        <h2>3. How We Use Your Information</h2>
+        <p>We use your information to:</p>
+        <ul>
+            <li>Provide and manage our services</li>
+            <li>Process your transactions</li>
+            <li>Communicate with you</li>
+            <li>Improve our services</li>
+            <li>Comply with legal obligations</li>
+        </ul>
+
+        <h2>4. Sharing Your Information</h2>
+        <p>We do not share your personal information with third parties except in the following circumstances:</p>
+        <ul>
+            <li>With your consent</li>
+            <li>To comply with legal obligations</li>
+            <li>To protect and defend our rights and property</li>
+            <li>To prevent fraud or illegal activities</li>
+        </ul>
+
+        <h2>5. Data Security</h2>
+        <p>We implement appropriate technical and organizational measures to protect your personal data against accidental or unlawful destruction, loss, alteration, unauthorized disclosure, or access.</p>
+
+        <h2>6. Your Data Protection Rights</h2>
+        <p>You have the following rights regarding your personal data:</p>
+        <ul>
+            <li>The right to access – You have the right to request copies of your personal data.</li>
+            <li>The right to rectification – You have the right to request that we correct any information you believe is inaccurate.</li>
+            <li>The right to erasure – You have the right to request that we erase your personal data, under certain conditions.</li>
+            <li>The right to restrict processing – You have the right to request that we restrict the processing of your personal data, under certain conditions.</li>
+            <li>The right to object to processing – You have the right to object to our processing of your personal data, under certain conditions.</li>
+            <li>The right to data portability – You have the right to request that we transfer your data to another organization or directly to you, under certain conditions.</li>
+        </ul>
+
+        <h2>7. Cookies and Tracking Technologies</h2>
+        <p>We use cookies and similar tracking technologies to enhance your experience on our website. Cookies are small files placed on your device that help us analyze website traffic and remember your preferences.</p>
+        <p>You can set your browser to refuse cookies or to alert you when cookies are being sent. However, if you disable cookies, some parts of our site may not function properly.</p>
+
+        <h2>8. Third-Party Links</h2>
+        <p>Our website may contain links to third-party websites. We are not responsible for the privacy practices or content of such external sites. We encourage you to review the privacy policies of any third-party sites you visit.</p>
+
+        <h2>9. Data Retention</h2>
+        <p>We will retain your personal data only for as long as necessary to fulfill the purposes outlined in this Privacy Policy or as required by law. When your data is no longer needed, we will take steps to securely delete or anonymize it.</p>
+
+        <h2>10. Changes to This Privacy Policy</h2>
+        <p>We may update our Privacy Policy from time to time. Any changes will be posted on this page with an updated effective date. We encourage you to review this Privacy Policy periodically for any changes.</p>
+
+        <h2>11. Contact Us</h2>
+        <p>If you have any questions about this Privacy Policy or our data practices, please contact us at:</p>
+        <p>Email: studenthelper04@gmail.com</p>
+        <p>Address:Adiss abeba, Ethiopia</p>
+
+        <p>Effective Date: start from: july 20 2024 GC</p>
+        {%if user.is_authenticated%}
+            <a style="margin-left: 100px; padding: 100px;" href="{%url 'order:profile'%}">Back</a>
+        {%else%}
+            <a style="margin-left: 100px; padding: 100px;" href="{%url 'base1'%}">Back</a>
+        {%endif%}
+
+    </div>
+</body>
+</html>
+

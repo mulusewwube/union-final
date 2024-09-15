@@ -1,0 +1,25 @@
+{% extends 'servicebase.html' %}
+{% load static %}
+
+<title>{% block title %} Graphics Design {% endblock %}</title>
+{% block base %}
+
+  <!-- Service Details Section -->
+  <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+    <img src="{% static 'assets/img/graphics-design.jpg' %}" alt="" class="img-fluid services-img">
+    <h3>Creative Graphics Design Services</h3>
+    <p style="color: black; font-size: 20px; text-align: center; margin-bottom: 26px; font-family: 'Muli-SemiBold';">
+      Our graphics design services offer creative solutions to meet your visual needs. We specialize in creating unique and eye-catching designs that effectively communicate your message.
+    </p>
+    <ul>
+      <li><i class="bi bi-check-circle"></i> <span>Custom logo design.</span></li>
+      <li><i class="bi bi-check-circle"></i> <span>Marketing materials and branding.</span></li>
+      <li><i class="bi bi-check-circle"></i> <span>Website and social media graphics.</span></li>
+    </ul>
+    <p style="color: black; font-size: 20px; text-align: center; margin-bottom: 26px; font-family: 'Muli-SemiBold';">
+      Let our talented designers create stunning visuals that elevate your brand and captivate your audience.
+    </p>
+    <a href="{%url 'order:graphics-design'%}"><button class="order-button">order now</button></a>
+  </div>
+
+{% endblock %}

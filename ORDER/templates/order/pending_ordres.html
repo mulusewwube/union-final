@@ -1,0 +1,389 @@
+{% extends 'order/profile.html' %}
+
+{% block content2 %}
+
+{% if research_help %}
+    <h4>Research_help</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Order date</th>
+                <th>Status</th>
+                <th>Type</th>
+                <th>Download</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for research_help in research_help %}
+            <tr>
+                <td>{{ research_help.firstname }}</td>
+                <td>{{ research_help.lastname }}</td>
+                <td>{{ research_help.ordered_at }}</td>
+                <td>{{ research_help.status }}</td>
+                
+                <td>Research_help</td>
+            <td>
+                    {% if research_help.status == "completed" %}
+                        <a href="{{ research_help.abstract.url }}" download>Download File</a>
+                    {% else %}
+                        The file will appear when it is completed.
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+
+    {% if business_plans %}
+    <h4>Business Plans</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Order date</th>
+                <th>Status</th>
+                <th>Type</th>
+                <th>Download</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for business_plan in business_plans %}
+            <tr>
+                <td>{{ business_plan.firstname }}</td>
+                <td>{{ business_plan.lastname }}</td>
+                <td>{{ business_plan.ordered_at }}</td>
+                <td>{{ business_plan.status }}</td>
+                
+                <td>Business Plan</td>
+            <td>
+                    {% if business_plan.status == "completed" %}
+                        <a href="{{ business_plan.abstract.url }}" download>Download File</a>
+                    {% else %}
+                        The file will appear when it is completed.
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+
+    {% if researches %}
+    <h4>Researches</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Order date</th>
+                <th>Status</th>
+                <th>Type</th>
+                <th>Download</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for research in researches %}
+            <tr>
+                <td>{{ research.firstname }}</td>
+                <td>{{ research.lastname }}</td>
+                <td>{{ research.ordered_at }}</td>
+                <td>{{ research.status }}</td>
+                
+                <td>Research</td>
+            <td>
+                    {% if research.status == "completed" %}
+                        <a href="{{ research.abstract.url }}" download>Download File</a>
+                    {% else %}
+                        The file will appear when it is completed.
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+
+    {% if theses %}
+    <h4>Theses</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Order date</th>
+                <th>Status</th>
+                <th>Type</th>
+                <th>Download</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for thesis in theses %}
+            <tr>
+                <td>{{ thesis.firstname }}</td>
+                <td>{{ thesis.lastname }}</td>
+                <td>{{ thesis.ordered_at }}</td>
+                <td>{{ thesis.status }}</td>
+                
+                <td>Thesis</td>
+            <td>
+                    {% if thesis.status == "completed" %}
+                        <a href="{{ thesis.abstract.url }}" download>Download File</a>
+                    {% else %}
+                        The file will appear when it is completed.
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+
+    {% if assignment %}
+    <h4>Assignment</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Order date</th>
+                <th>Status</th>
+                <th>Type</th>
+                <th>Download</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for assignment in assignment %}
+            <tr>
+                <td>{{ assignment.firstname }}</td>
+                <td>{{ assignment.lastname }}</td>
+                <td>{{ assignment.ordered_at }}</td>
+                <td>{{ assignment.status }}</td>
+                
+                <td>Assignment</td>
+            <td>
+                    {% if assignment.status == "completed" %}
+                        <a href="{{ assignment.abstract.url }}" download>Download File</a>
+                    {% else %}
+                        The file will appear when it is completed.
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+
+    {% if transcriptions %}
+    <h4>Transcription</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Order date</th>
+                <th>Status</th>
+                <th>Type</th>
+                <th>Download</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for transcription in transcriptions %}
+            <tr>
+                <td>{{ transcription.firstname }}</td>
+                <td>{{ transcription.lastname }}</td>
+                <td>{{ transcription.ordered_at }}</td>
+                <td>{{ transcription.status }}</td>
+                
+                <td>Transcription</td>
+            <td>
+                    {% if transcription.status == "completed" %}
+                        <a href="{{ transcription.transcribed_file.url }}" download>Download File</a>
+                    {% else %}
+                        The file will appear when it is completed.
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+
+    {% if videos %}
+    <h4>Video</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Order date</th>
+                <th>Status</th>
+                <th>Type</th>
+                <th>Download</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for video in videos %}
+            <tr>
+                <td>{{ video.firstname }}</td>
+                <td>{{ video.lastname }}</td>
+                <td>{{ video.ordered_at }}</td>
+                <td>{{ video.status }}</td>
+                
+                <td>Video</td>
+            <td>
+                    {% if video.status == "completed" %}
+                        <a href="{{ video.project_file.url }}" download>Download File</a>
+                    {% else %}
+                        The file will appear when it is completed.
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+
+    {% if programmings %}
+    <h4>Programming</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Order date</th>
+                <th>Status</th>
+                <th>Type</th>
+                <th>Download</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for programming in programmings %}
+            <tr>
+                <td>{{ programming.firstname }}</td>
+                <td>{{ programming.lastname }}</td>
+                <td>{{ programming.ordered_at }}</td>
+                <td>{{ programming.status }}</td>
+                
+                <td>Programming</td>
+            <td>
+                    {% if programming.status == "completed" %}
+                        <a href="{{ programming.project_file.url }}" download>Download File</a>
+                    {% else %}
+                        The file will appear when it is completed.
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+
+    {% if graphicss %}
+    <h4>Graphics</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Order date</th>
+                <th>Status</th>
+                <th>Type</th>
+                <th>Download</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for graphics in graphicss %}
+            <tr>
+                <td>{{ graphics.firstname }}</td>
+                <td>{{ graphics.lastname }}</td>
+                <td>{{ graphics.ordered_at }}</td>
+                <td>{{ graphics.status }}</td>
+                
+                <td>Graphics</td>
+            <td>
+                    {% if graphics.status == "completed" %}
+                        <a href="{{ graphics.design_file.url }}" download>Download File</a>
+                    {% else %}
+                        The file will appear when it is completed.
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+
+    {% if websites %}
+    <h4>Website</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Order date</th>
+                <th>Status</th>
+                <th>Type</th>
+                <th>Download</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for website in websites %}
+            <tr>
+                <td>{{ website.firstname }}</td>
+                <td>{{ website.lastname }}</td>
+                <td>{{ website.ordered_at }}</td>
+                <td>{{ website.status }}</td>
+                
+                <td>Website</td>
+            <td>
+                    {% if website.status == "completed" %}
+                        <a href="{{ website.website_file.url }}" download>Download File</a>
+                    {% else %}
+                        The file will appear when it is completed.
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+
+    {% if editings %}
+    <h4>Editing</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Order date</th>
+                <th>Status</th>
+                <th>Type</th>
+                <th>Download</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for editing in editings %}
+            <tr>
+                <td>{{ editing.firstname }}</td>
+                <td>{{ editing.lastname }}</td>
+                <td>{{ editing.ordered_at }}</td>
+                <td>{{ editing.status }}</td>
+                <td>Editing</td>
+            <td>
+                    {% if editing.status == "completed" %}
+                        <a href="{{ editing.edited_file.url }}" download>Download File</a>
+                    {% else %}
+                        The file will appear when it is completed.
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'servicebase.html' %}
+{% load static %}
+
+<title>{% block title %} Assignment {% endblock %}</title>
+{% block base %}
+
+  <!-- Service Details Section -->
+        <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+          <img src="{% static 'assets/img/services.jpg' %}" alt="" class="img-fluid services-img">
+          <h3>Comprehensive Assignment Assistance Tailored for You</h3>
+          <p style="color: black; font-size: 20px; text-align: center; margin-bottom: 26px; font-family: 'Muli-SemiBold';">
+            Our assignment service is designed to provide you with expert help and support. We understand the challenges students face and offer customized solutions to meet your academic needs.
+          </p>
+          <ul>
+            <li><i class="bi bi-check-circle"></i> <span>Personalized assignment writing to meet your requirements.</span></li>
+            <li><i class="bi bi-check-circle"></i> <span>Timely delivery to ensure you never miss a deadline.</span></li>
+            <li><i class="bi bi-check-circle"></i> <span>Original, plagiarism-free content guaranteed.</span></li>
+          </ul>
+          <p style="color: black; font-size: 20px; text-align: center; margin-bottom: 26px; font-family: 'Muli-SemiBold';">
+            Our team of professional writers is committed to delivering high-quality assignments that help you excel in your studies. Each assignment is thoroughly researched and written to perfection.
+          </p>
+          <p style="color: black; font-size: 20px; text-align: center; margin-bottom: 26px; font-family: 'Muli-SemiBold';">
+            Whether you need assistance with essays, research papers, or any other type of assignment, we are here to help. Trust us to provide insightful and engaging content that meets your academic standards.
+          </p>
+          <p style="color: black; font-size: 20px; text-align: center; margin-bottom: 26px; font-family: 'Muli-SemiBold';">
+            Experience the peace of mind that comes with knowing your assignments are in the hands of experts. Our service is designed to support your success and make your academic journey smoother.
+          </p>
+          <a href="{%url 'order:assignment'%}"><button class="order-button">order now</button></a>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  <!-- /Service Details Section -->
+
+{% endblock %}

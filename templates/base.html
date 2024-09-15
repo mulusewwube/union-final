@@ -1,0 +1,569 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>{% block title %} {% endblock %} UNION</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{%static 'css/assets/img/Untitled-5.png'%}" rel="icon">
+  <link href="{%static 'css/assets/img/apple-touch-icon.png'%}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{%static 'css/assets/vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
+  <link href="{%static 'css/assets/vendor/bootstrap-icons/bootstrap-icons.css'%}" rel="stylesheet">
+  <link href="{%static 'css/assets/vendor/aos/aos.css'%}" rel="stylesheet">
+  <link href="{%static 'css/assets/vendor/glightbox/css/glightbox.min.css'%}" rel="stylesheet">
+  <link href="{%static 'css/assets/vendor/swiper/swiper-bundle.min.css'%}" rel="stylesheet">
+
+  <!--for the profile page-->
+  <link rel="stylesheet" href="{%static 'css/assets/css/style.css'%}">
+  <!-- Demo CSS (No need to include it into your project) -->
+  <link rel="stylesheet" href="{%static 'css/assets/css/demo.css'%}">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'>
+
+    <!-- for the review -->
+    <link rel="stylesheet" href="{%static 'css/review.css'%}">
+
+  <!-- for the chat page -->
+  <link rel="stylesheet" href="{%static 'css/chat.css'%}" />
+
+  
+  <!-- Main CSS File -->
+  <link href="{%static 'css/assets/css/main.css'%}" rel="stylesheet">
+  <link href="{%static 'css/login.css'%}" rel="stylesheet">
+  <!--for password reset-->
+  <link rel="stylesheet" href="{% static 'css/confirm1.css'%}">
+
+  <!--for the reset password page-->
+  <link rel="stylesheet" href="{% static 'css/contactus.css'%}">
+
+
+  <!-- MATERIAL DESIGN ICONIC FONT -->
+  <link rel="stylesheet" href="{%static 'css/fonts/material-design-iconic-font/css/material-design-iconic-font.css'%}">
+
+  <!-- STYLE CSS -->
+  <link rel="stylesheet" href="{%static 'css/css/style.css'%}">
+
+  <!-- =======================================================
+  * Template Name: Impact
+  * Template URL: https://bootstrapmade.com/impact-bootstrap-business-website-template/
+  * Updated: Jun 14 2024 with Bootstrap v5.3.3
+  * Author: UNION.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <style>
+  .messages {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .messages li {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  .messages li.success {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+  }
+  .messages li.error {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+  }
+  #message-icon {
+            position: fixed;
+            bottom: 50px;
+            right: 20px;
+            z-index: 1000;
+            cursor: pointer;
+            background-color: white;
+            padding: 25px;
+            border-radius: 50%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        #message-icon .badge {
+            background-color: red;
+            color: white;
+            padding: 10px 10px;
+            border-radius: 50%;
+            position: absolute;
+            top: -10px;
+            right: -10px;
+        }
+
+        #chat-panel {
+            display: none;
+            position: fixed;
+            top: 20%;
+            right: 0;
+            width: 300px;
+            height: 80%;
+            background-color: white;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+            z-index: 1001;
+            overflow-y: auto;
+        }
+
+        #chat-header {
+            background-color: #008374;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+        }
+
+        #chat-header .close-btn {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            cursor: pointer;
+        }
+
+        #chat-body {
+            padding: 10px;
+            height: calc(100% - 120px);
+            overflow-y: auto;
+        }
+
+        #chat-footer {
+            padding: 10px;
+            background-color: #f1f1f1;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        #chat-footer input[type="text"] {
+            flex-grow: 1;
+            padding: 5px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #chat-footer button {
+            padding: 5px 10px;
+            background-color: #008374;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .chat-message {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            max-width: 300px;
+            word-wrap: break-word;
+        }
+
+        .chat-message.sent {
+            background-color: #007bff;
+            color: white;
+            text-align: right;
+        }
+
+        .chat-message.received {
+            background-color: #008374;
+            color: black;
+            text-align: left;
+        }
+
+        .message-content {
+            margin-bottom: 5px;
+        }
+
+        .message-timestamp {
+            font-size: 0.8em;
+            color: #a19d9d;
+        
+  }
+
+  .logo-container {
+  padding: 0 20px; /* Adjust spacing between the logo and other elements */
+}
+
+.union-logo {
+  height: 50px; /* Adjust the logo size as needed */
+  width: auto; /* Maintain the aspect ratio */
+  padding-top: 10px;
+}
+
+.union-footer-logo {
+    max-width: 50px; /* Adjust the size as needed */
+    height: auto; /* Maintains aspect ratio */
+}
+
+
+  </style>
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header fixed-top">
+
+    <div class="topbar d-flex align-items-center">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:union9537@gmail.com">union9537@gmail.com</a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+251953700112/+251988540393</span></i>
+
+        </div>
+    <!-- Union Logo -->
+    <div class="logo-container d-flex align-items-center">
+      <img src="{% static 'logo.png' %}" alt="Union Logo" class="union-logo">
+    </div>
+
+        <div class="social-links d-none d-md-flex align-items-center">
+          <a target="_blank" href="https://x.com/UNION0404" class="twitter"><i class="bi bi-twitter-x"></i></a>
+          <a target="_blank" href="https://www.facebook.com/groups/1138318070742713" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a target="_blank" href="https://www.instagram.com/union8318/?hl=en" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a target="_blank" href="https://www.linkedin.com/company/purpose-eth/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          <a target="_blank" href="https://t.me/do_my_assignments1" class="telegram"><i class="bi bi-telegram"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- End Top Bar -->
+
+
+    <div class="branding d-flex align-items-cente">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        {%if user.is_authenticated%}
+        <a href="{%url 'order:profile'%}" class="logo d-flex align-items-center">
+        
+        
+        {%else%}
+        <a href="/" class="logo d-flex align-items-center">
+        {%endif%}
+          <h1 class="sitename">UNION</h1>
+          <span>.</span>
+        </a>
+        
+        <nav id="navmenu" class="navmenu">
+          {%if user.is_authenticated%}
+          <ul>
+            <li><a href="{%url 'order:profile'%}">profile</a></li>
+            <li><a href="{%url 'order:profile'%}#services" class="active">Services<br></a></li>
+            <li><a href="{%url 'user:logout'%}">logout</a></li>
+          </ul>
+
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+          
+        </div>
+          {%else%}
+          <ul>
+            <li><a href="/#hero" class="active">Home<br></a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#services">Services</a></li>
+            <li><a href="/#faq">Faq</a></li>
+            <!-- <li><a href="/#team">Team</a></li> -->
+            <li><a href="/#contact">Contact</a></li>
+
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+
+          {%endif%}
+        </nav>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <main class="main">
+{% block content %}
+
+{% endblock %}
+</main>
+{%if user.is_authenticated%}
+<footer id="footer" class="footer">
+
+  <div class="container footer-top">
+    <div class="row gy-4">
+      <div class="col-lg-5 col-md-12 footer-about">
+        <a href="#footer" class="logo d-flex align-items-center">
+          <span class="sitename">UNION</span>
+        </a>
+        <p>At UNION, we believe in the power of knowledge and community. Our platform is designed to connect students and professionals, fostering a collaborative environment where everyone can thrive. Whether you need help with research, assignments, or skill development, UNION provides the resources and support to help you succeed. Join us and be a part of a vibrant community dedicated to excellence and continuous learning.</p>
+        
+        <div class="social-links d-flex mt-4">
+          <a target="_blank" href="https://x.com/UNION0404"><i class="bi bi-twitter-x"></i></a>
+          <a target="_blank" href="https://www.facebook.com/groups/1138318070742713"><i class="bi bi-facebook"></i></a>
+          <a target="_blank" href="https://www.instagram.com/union8318/?hl=en"><i class="bi bi-instagram"></i></a>
+          <a target="_blank" href="https://www.linkedin.com/company/purpose-eth/"><i class="bi bi-linkedin"></i></a>
+          <a target="_blank" href="https://t.me/do_my_assignments1" class="telegram"><i class="bi bi-telegram"></i></a>
+          
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-6 footer-links">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><a href="{%url 'order:profile'%}">Profile</a></li>
+          <li><a href="{%url 'order:profile'%}#services">Services</a></li>
+          <li><a href="{%url 'user:terms_and_conditions'%}">Terms of service</a></li>
+          <li><a href="{%url 'user:privacy_policy'%}">Privacy policy</a></li>
+          <li><a href="{%url 'user:submit_review'%}">live your review here</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-2 col-6 footer-links">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="{%url 'order:profile'%}#services">Research</a></li>
+          <li><a href="{%url 'order:profile'%}#services">Thesis</a></li>
+          <li><a href="{%url 'order:profile'%}#services">Assignment</a></li>
+          <li><a href="{%url 'order:profile'%}#services">Business Plan Writing</a></li>
+          <li><a href="{%url 'order:profile'%}#services">graphics design</a></li>
+          <li><a href="{%url 'order:profile'%}#services">Transcription</a></li>
+          <li><a href="{%url 'order:profile'%}#services">Video Editing</a></li>
+          <li><a href="{%url 'order:profile'%}#services">Web Development</a></li>
+          <li><a href="{%url 'order:profile'%}#services">programming</a></li>
+          <li><a href="{%url 'order:profile'%}#services">Editing</a></li>
+
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+        <h4>Contact Us</h4>
+        <p>Ethiopia</p>
+        <p>Addis ababa </p>
+        <p class="mt-4"><strong>Phone:</strong> <span>+251953700112/+251988540393</span></p>
+        <p><strong>Email:</strong> <span>union9537@gmail.com</span></p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container copyright text-center mt-4">
+    <p>© <span>Copyright</span> <strong class="px-1 sitename">UNION</strong> <span>All Rights Reserved</span></p>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you've purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+     
+    </div>
+  </div>
+
+</footer>
+{%else%}
+<footer id="footer" class="footer">
+
+  <div class="container footer-top">
+    <div class="row gy-4">
+      <div class="col-lg-5 col-md-12 footer-about">
+        <a href="#footer" class="logo d-flex align-items-center">
+          <div class="logo-container d-flex align-items-center">
+            <img src="{% static 'logo.png' %}" alt="Union Logo" class="union-footer-logo">
+            <span class="sitename ms-3">UNION</span>
+          </div>
+        </a>
+      
+      
+        <p>At UNION, we believe in the power of knowledge and community. Our platform is designed to connect students and professionals, fostering a collaborative environment where everyone can thrive. Whether you need help with research, assignments, or skill development, UNION provides the resources and support to help you succeed. Join us and be a part of a vibrant community dedicated to excellence and continuous learning.</p>
+        
+        <div class="social-links d-flex mt-4">
+          <a target="_blank" href="https://x.com/UNION0404"><i class="bi bi-twitter-x"></i></a>
+          <a target="_blank" href="https://www.facebook.com/groups/1138318070742713"><i class="bi bi-facebook"></i></a>
+          <a target="_blank" href="https://www.instagram.com/union8318/?hl=en"><i class="bi bi-instagram"></i></a>
+          <a target="_blank" href="https://www.linkedin.com/company/purpose-eth/"><i class="bi bi-linkedin"></i></a>
+          <a target="_blank" href="https://t.me/do_my_assignments1" class="telegram"><i class="bi bi-telegram"></i></a>
+
+          
+
+
+
+        </div>
+      </div>
+
+
+      <div class="col-lg-2 col-6 footer-links">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/#about">About us</a></li>
+          <li><a href="/#services">Services</a></li>
+          <li><a href="{%url 'user:terms_and_conditions'%}">Terms of service</a></li>
+          <li><a href="{%url 'user:privacy_policy'%}">Privacy policy</a></li>
+          <li><a href="{%url 'user:submit_review'%}">live your review here</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-2 col-6 footer-links">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="/#services">Research</a></li>
+          <li><a href="/#services">Thesis</a></li>
+          <li><a href="/#services">Assignment</a></li>
+          <li><a href="/#services">Business Plan Writing</a></li>
+          <li><a href="/#services">graphics design</a></li>
+          <li><a href="/#services">Transcription</a></li>
+          <li><a href="/#services">Video Editing</a></li>
+          <li><a href="/#services">Web Development</a></li>
+          <li><a href="/#services">programming</a></li>
+          <li><a href="/#services">Editing</a></li>
+
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+        <h4>Contact Us</h4>
+        <p>Ethiopia</p>
+        <p>Addis ababa </p>
+        <p class="mt-4"><strong>Phone:</strong> <span>+251953700112/+251988540393</span></p>
+        <p><strong>Email:</strong> <span>union9537@gmail.com</span></p>
+      </div>
+      
+
+    </div>
+  </div>
+
+  <div class="container copyright text-center mt-4">
+    <p>© <span>Copyright</span> <strong class="px-1 sitename">UNION</strong> <span>All Rights Reserved</span></p>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you've purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+     
+    </div>
+  </div>
+
+
+
+
+</footer>
+{%endif%}
+
+<!-- Scroll Top -->
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Preloader -->
+<div id="preloader"></div>
+
+<!-- Vendor JS Files -->
+<script src="{%static 'css/assets/vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+<script src="{%static 'css/assets/vendor/aos/aos.js'%}"></script>
+<script src="{%static 'css/assets/vendor/glightbox/js/glightbox.min.js'%}"></script>
+<script src="{%static 'css/assets/vendor/swiper/swiper-bundle.min.js'%}"></script>
+<script src="{%static 'css/assets/vendor/purecounter/purecounter_vanilla.js'%}"></script>
+<script src="{%static 'css/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js'%}"></script>
+<script src="{%static 'css/assets/vendor/isotope-layout/isotope.pkgd.min.js'%}"></script>
+
+<!-- for the order forms -->
+<script src="{%static 'css/js/jquery-3.3.1.min.js'%}"></script>
+
+<!-- JQUERY STEP -->
+<script src="{%static 'css/js/jquery.steps.js'%}"></script>
+<script src="{%static 'css/js/main.js'%}"></script>
+<!-- Main JS File -->
+<script src="{%static 'css/assets/js/main.js'%}"></script>
+<script>
+  let stars = document.getElementsByClassName("star");
+
+function setRating(rating) {
+    let cls = "";
+    switch(rating) {
+    case 1: cls = "one"; break;
+    case 2: cls = "two"; break;
+    case 3: cls = "three"; break;
+    case 4: cls = "four"; break;
+    case 5: cls = "five"; break;
+    }
+    for (let i = 0; i < stars.length; i++) {
+      stars[i].className = "star " + (i < rating ? cls : "");
+    }
+    document.getElementById('id_rating').value = rating || 0; // Default to 0 if rating is not set
+    }
+
+    // Hide messages after 5 seconds
+    setTimeout(function() {
+        var messages = document.getElementById('messages');
+        if (messages) {
+            messages.style.display = 'none';
+        }
+    }, 5000);
+
+
+document.addEventListener('DOMContentLoaded', function() {
+            function checkUnreadMessages() {
+                fetch('/check-unread-messages/')
+                    .then(response => response.json())
+                    .then(data => {
+                        const messageIcon = document.getElementById('message-icon');
+                        const badge = messageIcon.querySelector('.badge');
+                        if (data.unread_count > 0) {
+                            badge.textContent = data.unread_count;
+                        } else {
+                            badge.textContent = '0';
+                        }
+                    });
+            }
+
+            // Check for unread messages every 30 seconds
+            setInterval(checkUnreadMessages, 5000);
+            // Initial check
+            checkUnreadMessages();
+
+            // Toggle chat panel visibility
+            document.getElementById('message-icon').addEventListener('click', function() {
+                const chatPanel = document.getElementById('chat-panel');
+                chatPanel.style.display = 'block';
+                loadPreviousChats();
+            });
+
+            // Close chat panel
+            document.querySelector('#chat-header .close-btn').addEventListener('click', function() {
+                const chatPanel = document.getElementById('chat-panel');
+                chatPanel.style.display = 'none';
+            });
+
+            // Load previous chats
+            function loadPreviousChats() {
+                fetch('/load-previous-chats/')
+                    .then(response => response.text())
+                    .then(html => {
+                        document.getElementById('chat-body').innerHTML = html;
+                        // Reset unread messages count
+                        const messageIcon = document.getElementById('message-icon');
+                        const badge = messageIcon.querySelector('.badge');
+                        badge.textContent = '0';
+                    });
+            }
+
+            });
+
+            document.getElementById("chat-footer").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const messageInput = event.target.querySelector('input[name="content"]');
+            const messageText = messageInput.value.trim();
+
+            if (messageText) {
+                event.target.submit();
+            }
+      });
+</script>
+
+</body>
+
+</html>

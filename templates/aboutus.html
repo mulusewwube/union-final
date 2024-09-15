@@ -1,0 +1,92 @@
+{% extends 'base.html' %} {%load static%}
+<!-- partial:index.partial.html -->
+<title>{% block title %} About Us {%endblock%}</title>
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{%static 'css/aboutus.css'%}" />
+{% endblock %} {% block content %}
+<section class="about">
+  <h1>About Us</h1>
+  <p style="font-weight: bold">Student Helper is a leading platform...</p>
+  <div class="about-info">
+    <div class="about-img">
+      <img
+        src="/static/css/image1.jpg"
+        alt="Student Helper"
+      />
+    </div>
+    <div>
+      <p>
+        GeeksforGeeks is a leading platform that provides computer science
+        resources and coding challenges for programmers and technology
+        enthusiasts, along with interview and exam preparations for upcoming
+        aspirants. With a strong emphasis on enhancing coding skills and
+        knowledge, it has become a trusted destination for over 12 million plus
+        registered users worldwide.
+      </p>
+      <button>Read More...</button>
+    </div>
+  </div>
+
+  <section class="team">
+    <h1>Meet Our Team</h1>
+    <div class="team-cards">
+      <!-- Cards here -->
+      <!-- Card 1 -->
+
+      <div class="card">
+        <div class="card-img">
+          <img
+            src="https://media.geeksforgeeks.org/wp-content/uploads/20230824122630/business-office-business-woman-professional.jpg"
+            alt="User 1"
+          />
+        </div>
+        <div class="card-info">
+          <h2 class="card-name">Jane</h2>
+          <p class="card-role">CEO and Founder</p>
+          <p class="card-email">jane@example.com</p>
+          <p><button class="button">Contact</button></p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+
+      <div class="card">
+        <div class="card-img">
+          <img
+            src="https://media.geeksforgeeks.org/wp-content/uploads/20230822183347/man-portrait-businessman-male.jpg"
+            alt="User 2"
+          />
+        </div>
+        <div class="card-info">
+          <h2 class="card-name">Miller</h2>
+          <p class="card-role">Co-Founder</p>
+          <p class="card-email">Miller@example.com</p>
+          <p><button class="button">Contact</button></p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+
+      <div class="card">
+        <div class="card-img">
+          <img
+            src="https://media.geeksforgeeks.org/wp-content/uploads/20230824122630/business-office-business-woman-professional.jpg"
+            alt="User 3"
+          />
+        </div>
+        <div class="card-info">
+          <h2 class="card-name">Joe</h2>
+          <p class="card-role">Co-Founder</p>
+          <p class="card-email">Joe@example.com</p>
+          <p><button class="button">Contact</button></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<footer>
+  <p>© 2023 GeeksforGeeks. All Rights Reserved.</p>
+</footer>
+{% endblock %}

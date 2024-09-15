@@ -1,0 +1,42 @@
+.new_card{
+  height: 350px;
+  width: 500px;
+  background-color: rgba(255,255,255,0.13);
+  position:relative;
+  transform: translate(-50%,-50%);
+  top: 5%;
+  left: 50%;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgb(74 71 71 / 10%);
+  box-shadow: 0 0 40px rgba(8,7,16,0.6);
+  padding: 50px 35px;
+  margin-top:400px;
+
+}
+label{
+  display: block;
+  margin-top: 30px;
+  font-size: 16px;
+  
+  font-weight: 500;
+}
+input{
+  display: block;
+  height: 50px;
+  width: 100%;
+  background-color: rgb(5 4 4 / 7%);
+  border-radius: 3px;
+  padding: 0 10px;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 300;
+}
+.cancel{
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  max-width: 150px;
+  margin-left: 9%;
+}
+

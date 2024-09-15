@@ -1,0 +1,26 @@
+{% extends 'servicebase.html' %}
+{% load static %}
+
+<title>{% block title %} Transcription {% endblock %}</title>
+{% block base %}
+
+  <!-- Service Details Section -->
+  <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+    <img src="{% static 'assets/img/transcription.jpg' %}" alt="" class="img-fluid services-img">
+    <h3>Accurate Transcription Services</h3>
+    <p style="color: black; font-size: 20px; text-align: center; margin-bottom: 26px; font-family: 'Muli-SemiBold';">
+      Our transcription services provide accurate and reliable transcriptions for all your audio and video needs. We ensure timely delivery and high-quality output.
+    </p>
+    <ul>
+      <li><i class="bi bi-check-circle"></i> <span>Verbatim and edited transcription options.</span></li>
+      <li><i class="bi bi-check-circle"></i> <span>Fast turnaround times.</span></li>
+      <li><i class="bi bi-check-circle"></i> <span>Confidential and secure service.</span></li>
+    </ul>
+    <p style="color: black; font-size: 20px; text-align: center; margin-bottom: 26px; font-family: 'Muli-SemiBold';">
+      Trust our experienced transcribers to deliver precise transcriptions that meet your requirements.
+    </p>
+    <a href="{%url 'order:transcription'%}"><button class="order-button">order now</button></a>
+
+  </div>
+
+{% endblock %}

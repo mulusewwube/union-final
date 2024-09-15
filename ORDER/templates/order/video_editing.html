@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+{% load static %}
+<title>{% block title %}Video {% endblock %} </title>
+
+{% block content %}
+<div class="wrapper">
+  <form method="post" action="{% url 'order:video-project' %}" id="wizard" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <!-- SECTION 1 -->
+    <h2></h2>
+    <section>
+      <div class="inner">
+        <div class="image-holder">
+          <img src="{% static 'css/assets/img/form_images/images (1).jpeg' %}" alt="">
+        </div>
+        <div class="form-content">
+          <div class="form-header">
+            <h3>Video Editing Submission Form</h3>
+          </div>
+          {% if messages %}
+        <ul class="messages" id="messages">
+            {% for message in messages %}
+                <li class="{{ message.tags }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+          {% endif %}
+          <p>Please fill with your details</p>
+          <div class="form-row">
+            <div class="form-holder">
+              <input name="firstname" type="text" placeholder="First Name" class="form-control">
+            </div>
+            <div class="form-holder">
+              <input name="lastname" type="text" placeholder="Last Name" class="form-control">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-holder">
+              <input name="email" type="text" placeholder="Your Email" class="form-control">
+            </div>
+            <div class="form-holder">
+              <input name="phone_number" type="text" placeholder="Phone Number" class="form-control">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-holder" style="align-self: flex-end; transform: translateY(4px);">
+              <div class="checkbox-tick">
+                <label class="male">
+                  <input name="gender" type="radio" value="male" checked> Male<br>
+                  <span class="checkmark"></span>
+                </label>
+                <label class="female">
+                  <input type="radio" name="gender" value="female"> Female<br>
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="checkbox-circle">
+            <label>
+              <input type="checkbox" name="accept_terms" checked> Nor again is there anyone who loves or pursues or desires to obtaini.
+              <span class="checkmark"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2 -->
+    <h2></h2>
+    <section>
+      <div class="inner">
+        <div class="image-holder">
+          <img src="{% static 'css/assets/img/form_images/images.jpeg' %}" alt="">
+        </div>
+        <div class="form-content">
+          <div class="form-header">
+            <h3>Video Editing Submission Form</h3>
+          </div>
+          <p>Please fill with additional info</p>
+          <div class="form-row">
+            <div class="form-holder w-100">
+              <input name="title" type="text" placeholder="Project Title" class="form-control">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-holder">
+              <input name="video_length" type="text" placeholder="Video Length (e.g., 10 minutes)" class="form-control">
+            </div>
+            <div class="form-holder">
+              <select name="video_format" class="form-control">
+                <option value="">Select Video Format</option>
+                <option value="wave">WAVE</option>
+                <option value="mp4">MP4</option>
+                <option value="mov">MOV</option>
+                <option value="avi">AVI</option>
+                <option value="mkv">MKV</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+
+          </div>
+          <div class="form-row">
+            <div class="form-holder">
+              <input name="project_file" type="file" placeholder="Upload Video File" class="form-control">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3 -->
+    <h2></h2>
+    <section>
+      <div class="inner">
+        <div class="image-holder">
+          <img src="{% static 'css/assets/img/form_images/istockphoto-1143910377-612x612.jpg' %}" alt="">
+        </div>
+        <div class="form-content">
+          <div class="form-header">
+            <h3>Video Editing Submission Form</h3>
+          </div>
+          <p>Send an optional message</p>
+          <div class="form-row">
+            <div class="form-holder w-100">
+              <textarea name="description" placeholder="Your message here!" class="form-control" style="height: 99px;"></textarea>
+            </div>
+          </div>
+          <div class="checkbox-circle mt-24">
+            <label>
+              <input type="checkbox" name="accept_terms" checked> Please accept <a href="{%url 'user:terms_and_conditions'%}">terms and ' ?</a>
+              <span class="checkmark"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </section>
+  </form>
+</div>
+
+<!-- JQUERY -->
+
+<!-- Template created and distributed by Colorlib -->
+{% endblock %}

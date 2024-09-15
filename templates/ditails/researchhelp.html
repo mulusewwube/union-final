@@ -1,0 +1,25 @@
+{% extends 'servicebase.html' %}
+{% load static %}
+
+<title>{% block title %} Research Help Service {% endblock %}</title>
+{% block base %}
+
+  <!-- Service Details Section -->
+  <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+    <img src="{% static 'assets/img/research.jpg' %}" alt="" class="img-fluid services-img">
+    <h3>Comprehensive Research Assistance for Academic and Professional Projects</h3>
+    <p style="color: black; font-size: 20px; text-align: center; margin-bottom: 26px; font-family: 'Muli-SemiBold';">
+      We assist with all stages of the research process, including topic selection, methodology design, data collection, and analysis. Our team is skilled in various research methodologies.
+    </p>
+    <ul>
+      <li><i class="bi bi-check-circle"></i> <span>In-depth literature reviews and data analysis.</span></li>
+      <li><i class="bi bi-check-circle"></i> <span>Customized research plans and proposals.</span></li>
+      <li><i class="bi bi-check-circle"></i> <span>Professional guidance and support throughout your project.</span></li>
+    </ul>
+    <p style="color: black; font-size: 20px; text-align: center; margin-bottom: 26px; font-family: 'Muli-SemiBold';">
+      Our experts provide the support you need to achieve your research goals. We ensure that your research is thorough, well-documented, and professionally presented.
+    </p>
+    <a href="{%url 'order:research_help'%}"><button class="order-button">order now</button></a>
+  </div>
+
+{% endblock %}

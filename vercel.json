@@ -1,0 +1,27 @@
+{
+  "builds": [
+    {
+      "src": "myproject/wsgi.py",
+      "use": "@vercel/python",
+      "config": {
+        "buildCommand": "python manage.py collectstatic --noinput"
+      }
+    },
+    { "src": "myproject/static/**", "use": "@vercel/static" },
+    { "src": "myproject/staticfiles/**", "use": "@vercel/static" }
+  ],
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "myproject/static/$1"
+    },
+    {
+      "src": "/media/(.*)",
+      "dest": "myproject/media/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "myproject/wsgi.py"
+    }
+  ]
+}
